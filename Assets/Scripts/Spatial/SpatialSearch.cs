@@ -239,7 +239,8 @@ public class SpatialSearch : MonoBehaviour
         }
 
         chrono.Stop();
-        m_timeLabel.text = chrono.ElapsedTicks.ToString();
+        m_timeLabel.text = chrono.ElapsedTicks.ToString() + "  tick";
+         
         result.AsParallel().ForAll(t => t.Select());
     }
 
